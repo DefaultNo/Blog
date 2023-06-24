@@ -1,18 +1,16 @@
-import './styles/index.scss';
+import './styles/index.scss'
 
-import { classNames } from 'shared/lib/classNames/classNames';
-import { AppRouter } from './providers/router';
+import { classNames } from 'shared/lib/classNames/classNames'
+import { AppRouter } from './providers/router'
 
-import {Suspense} from 'react'
-import { useTranslation } from 'react-i18next';
+import { Suspense } from 'react'
 // HOOKS
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from 'app/providers/ThemeProvider'
 
-import { Navbar } from 'widgets/Navbar';
-import { Sidebar } from 'widgets/Sidebar';
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 
-
-const App = () => {
+function App () {
     const { theme } = useTheme()
 
     return (
@@ -28,4 +26,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default App

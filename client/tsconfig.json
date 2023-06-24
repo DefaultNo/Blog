@@ -5,6 +5,7 @@
       // noImplicitAny - подсвечивает места где не указан тип
       "noImplicitAny": true,
       "module": "ESNext",
+      // "strictNullChecks": true,
       // target - в какую спецификацию компилируем: для большей поддержки браузеров - ES5
       "target": "es5",
       "jsx": "react-jsx",

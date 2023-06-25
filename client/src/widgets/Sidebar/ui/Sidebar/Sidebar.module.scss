@@ -2,12 +2,9 @@
     height: calc(100vh - var(--navbar-height));
     flex: 0 0 var(--sidebar-width);
     width: var(--sidebar-width);
-
     padding: var(--base-padding);
-
     border-radius: 0 10px 0 0;
     background-color: var(--secondary-bg-color);
-
     transition: width, flex 0.3s ease 0s;
 }
 

@@ -9,6 +9,6 @@ export const LangSwitcher = () => {
     }
 
     return (
-        <Button onClick={toggle}>{t('Язык')}</Button>
+        <Button onClick={ toggle }>{t('Язык')}</Button>
     )
 }

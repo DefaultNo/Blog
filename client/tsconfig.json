@@ -1,31 +1,37 @@
 {
-    "compilerOptions": {
-      // outDir - место куда производится сборка (не важна, сборка идет через webpack)
-      "outDir": "./dist/",
-      // noImplicitAny - подсвечивает места где не указан тип
-      "noImplicitAny": true,
-      "module": "ESNext",
-      // "strictNullChecks": true,
-      // target - в какую спецификацию компилируем: для большей поддержки браузеров - ES5
-      "target": "es5",
-      "jsx": "react-jsx",
-      // allowJs - компилятор будет обрабатывать не только TS, но и JS.
-      "allowJs": true,
-      "moduleResolution": "node",
-      // baseUrl - для абсолютного импорта.
-      "baseUrl": ".",
-      // esModuleInterop - позволяет работать с пакетами которые используют commonJs как с обычными пакетами через import.
-      "esModuleInterop": true,
-      // allowSyntheticDefaultImports - если библиотека не имеет default import, лоадеры (ts-loader) автоматически создают их вместо (import * as ... from '...') на import ... from '...'
-      "allowSyntheticDefaultImports": true, 
-      "paths": {
-        "*": ["./src/*"]
-      }
-    },
-    
-    "ts-node": {
-      "compilerOptions": {
-        "module": "CommonJS"
-      }
+  "compilerOptions": {
+    // outDir - место куда производится сборка (не важна, сборка идет через webpack)
+    "outDir": "./dist/",
+    // noImplicitAny - подсвечивает места где не указан тип
+    "noImplicitAny": true,
+    "module": "ESNext",
+    // "strictNullChecks": true,
+    // target - в какую спецификацию компилируем: для большей поддержки браузеров - ES5
+    "target": "es2017",
+    "jsx": "react-jsx",
+    // allowJs - компилятор будет обрабатывать не только TS, но и JS.
+    "allowJs": true,
+    "moduleResolution": "node",
+    // baseUrl - для абсолютного импорта.
+    "baseUrl": ".",
+    // esModuleInterop - позволяет работать с пакетами которые используют commonJs как с обычными пакетами через import.
+    "esModuleInterop": true,
+    // allowSyntheticDefaultImports - если библиотека не имеет default import, лоадеры (ts-loader) автоматически создают их вместо (import * as ... from '...') на import ... from '...'
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
     }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
+    "include": [
+      "./config/jest/setupTests.ts",
+      "./src/**/*.ts",
+      "./src/**/*.tsx"
+    ],
   }
+}

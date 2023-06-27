@@ -8,20 +8,16 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
     gap: var(--base-gap);
-
-    font: var(--font-m);
+    font-size: var(--font-size-m);
+    font-family: var(--font-family-main);
     color: var(--primary-color);
     background-color: var(--bg-color);
-
     min-height: 100%;
 }
 
-
 .content-wrapper {
     flex: 1 1 auto;
-
     display: flex;
     gap: var(--base-gap);
 }
@@ -30,6 +26,5 @@
     flex: 1 1 auto;
     background-color: var(--secondary-bg-color);
     padding: var(--base-padding);
-
-    border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0;
 }

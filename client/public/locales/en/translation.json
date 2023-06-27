@@ -1,5 +1,10 @@
 {
     "Язык": "Language",
     "Перевод": "Translate",
-    "Основная страница": "Main page"
+    "Основная страница": "Main page",
+    "Страница не найдена": "Page not found",
+
+    "Упс!": "Whoops!",
+    "Что-то пошло не так": "Something went wrong",
+    "Обновить страницу": "Reload page"
 }

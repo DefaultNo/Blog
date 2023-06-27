@@ -1,3 +1,7 @@
+.ThemeSwitcherWrapper {
+    display: flex;
+}
+
 .ThemeSwitcher {
     display: flex;
     align-items: center;
@@ -8,7 +12,6 @@
 }
 
 .checkbox {
-    -webkit-appearance: none;
     appearance: none;
     display: none;
 }
@@ -38,6 +41,7 @@
         left: 2px;
         background-color: var(--secondary-bg-color);
     }
+
     &::before {
         right: 2px;
         background-color: var(--secondary-bg-color);
@@ -49,6 +53,7 @@
     ~::after {
         transform: translateY(-50%) translateX(-50px);
     }
+
     ~::before {
         transform: translateY(-50%) translateX(0);
     }

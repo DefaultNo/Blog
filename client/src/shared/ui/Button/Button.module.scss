@@ -1,16 +1,106 @@
-.Button {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 8px 20px;
-    text-transform: uppercase;
-    background-color: var(--bg-color);
-    border-radius: 6px;
-    color: #fff;
+.ButtonWrapper {
+    display: flex;
 }
 
+.Button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: all .3s ease 0s;
+}
+
+// 1-ый вариант кнопки
+.blue {
+    padding: 8px 15px;
+    border: 2px solid var(--blue-color);
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background-color: var(--blue-color);
+        transition: all .3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &::after {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 2-ый вариант кнопки
 .outline {
     border: 1px solid red;
+}
+
+// loader
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease 0s;
+    position: relative;
+    
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--primary-color);
+        border-radius: 50%;
+        border-color: var(--primary-color) transparent var(--primary-color) transparent;
+        animation: loader-anim .7s linear infinite;
+    }
+}
+
+
+// disabled (загрузка, т.п)
+.disabled {
+    opacity: 0.7;
+
+    &.blue {
+        &::after {
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    .loader {
+        flex: 0 0 16px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes loader-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

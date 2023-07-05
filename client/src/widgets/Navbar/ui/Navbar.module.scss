@@ -6,9 +6,10 @@
     width: 100%;
     height: var(--navbar-height);
     background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
 }
 
-.list {
+.links {
     display: flex;
     align-items: center;
     gap: 10px;

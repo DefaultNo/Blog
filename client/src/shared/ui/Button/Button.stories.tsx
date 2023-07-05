@@ -15,6 +15,23 @@ export const Default: Story = {
   // decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     children: 'Test Button',
-    theme: ThemeButton.DEFAULT
+    theme: ThemeButton.PRIMARY
+  }
+}
+
+export const Blue: Story = {
+  // decorators: [ThemeDecorator(Theme.DARK)],
+  args: {
+    children: 'Blue Button',
+    theme: ThemeButton.BLUE
+  }
+}
+
+export const BlueLoader: Story = {
+  // decorators: [ThemeDecorator(Theme.DARK)],
+  args: {
+    children: 'Loader Button',
+    theme: ThemeButton.BLUE,
+    loader: true
   }
 }

@@ -8,7 +8,7 @@ describe('Button', () => {
     })
 
     test('With default class', () => {
-        render(<Button theme={ThemeButton.DEFAULT}>Button</Button>)
+        render(<Button theme={ThemeButton.PRIMARY}>Button</Button>)
         expect(screen.getByText('Button')).toHaveClass('default')
     })
 })

@@ -1,5 +1,6 @@
 .AppLink {
-    font-size: 16px;
+    display: block;
+    font-size: var(--font-size-m);
     color: var(--primary-color);
 }
 
@@ -9,4 +10,25 @@
 
 .secondary {
     color: var(--secondary-color);
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: var(--base-padding);
+    border-radius: var(--border-radius);
+    position: relative;
+    transition: background-color .2s ease 0s, color .2s ease 0s;
+
+    @media (any-hover: hover){
+        &:hover{
+            background-color: var(--inverted-bg-color);
+            color: var(--inverted-primary-color);
+
+            path {
+                fill: var(--inverted-primary-color)
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Button } from 'shared/ui/Button/Button'
-
+import ErrorIcon from 'shared/assets/icons/Navbar/Error.svg'
 // Кнопка для тестирования
 export const BugButton = () => {
     const [error, setError] = useState(false)
@@ -16,6 +16,8 @@ export const BugButton = () => {
     }, [error])
 
     return (
-        <Button onClick={onThrow}>Сделать ошибку</Button>
+        <Button title='Тестовая ошибка' onClick={onThrow}>
+            <ErrorIcon style={{ width: '30px', height: '30px' }} />
+        </Button>
     )
 }

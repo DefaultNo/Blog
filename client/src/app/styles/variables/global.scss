@@ -12,6 +12,7 @@
 
     // SIZES 
     // navbar
+    --border-radius: 6px;
     --navbar-height: 50px;
 
     // sidebar
@@ -20,5 +21,13 @@
 
     // indents
     --base-padding: 15px;
-    --base-gap: 10px;
+    --base-gap: 8px;
+
+    // Index
+    --modal-z-index: 10;
+
+    // Доп. цвета сайта
+    --overlay-color: rgba(0 0 0 / 0.7);
+    --blue-color: #5F7ADB;
+    --red-color: #c00;
 }

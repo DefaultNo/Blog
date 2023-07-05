@@ -3,16 +3,19 @@
 @import 'themes/default';
 @import 'themes/dark';
 
+body {
+    font-size: var(--font-size-m);
+    font-family: var(--font-family-main);
+}
 
 .App {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    padding: 8px;
     gap: var(--base-gap);
-    font-size: var(--font-size-m);
-    font-family: var(--font-family-main);
-    color: var(--primary-color);
     background-color: var(--bg-color);
+    color: var(--primary-color);
     min-height: 100%;
 }
 
@@ -26,5 +29,5 @@
     flex: 1 1 auto;
     background-color: var(--secondary-bg-color);
     padding: var(--base-padding);
-    border-radius: 10px 0 0;
+    border-radius: var(--border-radius);
 }

@@ -1,7 +1,15 @@
-.App.dark {
-    --bg-color: #121212;
-    --secondary-bg-color: #1c1c1c;
+.app_dark_theme {
+    // Фон для body
+    --bg-color: #121316;
+
+    // Фон для основных блоков (sidebar, pages, navbar)
+    --secondary-bg-color: #1B1C1F;
     --inverted-bg-color: #fff;
+
+    // Основной цвет (Основного текста, кнопок, и т.п)
     --primary-color: #FFF;
-    --secondary-color: #EEE;
+    --inverted-primary-color: #222;
+
+    // Дополнительный текст (параграфы, описание и т.п)
+    --secondary-color: #E7E7E7;
 }

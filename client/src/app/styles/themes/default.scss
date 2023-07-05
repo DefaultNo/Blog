@@ -1,7 +1,15 @@
 :root {
-    --bg-color: #eaeaea;
-    --secondary-bg-color: #FFF;
-    --inverted-bg-color: #1c1c1c;
-    --primary-color: #4B4B4B;
-    --secondary-color: #7A808A;
+    // Фон для body
+    --bg-color: #F5F4F6;
+
+    // Фон для основных блоков (sidebar, pages, navbar)
+    --secondary-bg-color: #fff;
+    --inverted-bg-color: #1B1C1F;
+
+    // Основной цвет (Основного текста, кнопок, и т.п)
+    --primary-color: #222;
+    --inverted-primary-color: #fff;
+
+    // Дополнительный текст (параграфы, описание и т.п)
+    --secondary-color: #4F4F4f;
 }

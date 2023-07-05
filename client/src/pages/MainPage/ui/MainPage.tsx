@@ -7,7 +7,6 @@ const MainPage = () => {
     return (
         <div>
             {t('Основная страница')}
-            <Button className={ThemeButton.DEFAULT}>Кнопка</Button>
         </div>
     )
 }

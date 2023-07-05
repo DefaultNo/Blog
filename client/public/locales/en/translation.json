@@ -1,10 +1,14 @@
 {
-    "Язык": "Language",
+    "Язык": "English",
+    "Короткий язык": "EN",
     "Перевод": "Translate",
     "Основная страница": "Main page",
     "Страница не найдена": "Page not found",
 
     "Упс!": "Whoops!",
     "Что-то пошло не так": "Something went wrong",
-    "Обновить страницу": "Reload page"
+    "Обновить страницу": "Reload page",
+
+    "Войти": "Log In",
+    "Вы ввели неверный логин или пароль": "Email or password is incorrect"
 }

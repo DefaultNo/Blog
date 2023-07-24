@@ -25,6 +25,5 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
         resolve: buildResolvers(options), // Указывает для каких расширений не требуется указывать их тип (.js) при импорте - экспорте
         devtool: isDev ? 'inline-source-map' : undefined, // Карта показывает в каком конкретно файле произошла ошибка
         devServer: isDev ? buildDevServer(options) : undefined // Сервер
-
     }
 }

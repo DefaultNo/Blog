@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 import { type BuildOptions } from './types/config'
 
-export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins ({ paths, isDev, apiUrl }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
         new HtmlWebpackPlugin({ // Плагин минимизации HTML
             template: paths.html // Путь к шаблонному файлу, берется за пример
@@ -17,12 +17,14 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
-            __IS_DEV__: JSON.stringify(isDev)
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl)
         })
     ]
 
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin())
+
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false
         }))

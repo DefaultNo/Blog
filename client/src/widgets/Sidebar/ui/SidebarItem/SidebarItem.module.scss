@@ -1,0 +1,30 @@
+.link {
+    white-space: nowrap;
+    transition: transform .2s ease 0s, opacity .2s ease 0s;
+}
+
+.svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    
+    svg {
+        path {
+            fill: var(--inverted-bg-color);
+            transition: all .2s ease 0s;
+        }
+    }
+}
+
+
+.collapsed {
+    .link {
+        display: inline-flex;
+        transform: translateX(-100%) scale(0);
+        opacity: 0;
+    }
+}

@@ -30,16 +30,12 @@
     // Бургер Закрыт
     &.collapsed {
         span {
-            transform: scale(0);
-    
             &:first-child {
-                transform: translateY(7px) rotate(135deg);
-    
+                transform: scaleX(0.6) translateY(14px);
             }
     
             &:last-child {
-                transform: translateY(-7px) rotate(-135deg);
-    
+                transform: scaleX(0.6) translateY(-14px);
             }
         }
     }

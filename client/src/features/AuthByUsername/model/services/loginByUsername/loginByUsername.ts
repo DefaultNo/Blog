@@ -1,7 +1,6 @@
-import axios from 'axios'
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { type ThunkConfig } from 'app/providers/StoreProvider'
 import { userActions, type User } from 'entities/User'
-import i18n from 'shared/config/i18n/i18n'
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage'
 
 interface LoginByUsernameProps {
@@ -9,20 +8,26 @@ interface LoginByUsernameProps {
     password: string
 }
 
-export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, { rejectValue: string }>(
+// Коды ошибок -> сохраняются в state -> отображаются в компоненте в зависимости от статус кода
+enum LoginErrors {
+    INCORRECT_DATA = '',
+    SERVER_ERROR = '',
+}
+
+export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, ThunkConfig<string>>(
     'login/loginByUsername',
     async (authData, thunkAPI) => {
         try {
-            const response = await axios.post<User>('http://localhost:8000/login', authData)
+            const response = await thunkAPI.extra.api.post<User>('/login', authData)
             if (!response.data) {
                 throw new Error()
             }
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data))
             thunkAPI.dispatch(userActions.setAuthData(response.data))
-
+            thunkAPI.extra.navigate('/about')
             return response.data
         } catch (e) {
-            return thunkAPI.rejectWithValue(i18n.t('Вы ввели неверный логин или пароль'))
+            return thunkAPI.rejectWithValue('Error')
         }
     }
 )

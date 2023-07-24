@@ -3,18 +3,43 @@ import { type StateSchema } from './StateSchema'
 
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
-import { loginReducer } from 'features/AuthByUsername'
+import { createReducerManager } from './reducerManager'
+import { $api } from 'shared/api/api'
+import { type To, type NavigateOptions } from 'react-router-dom'
 
-export function createReduxStore (initialState: StateSchema) {
+export function createReduxStore (
+    initialState: StateSchema,
+    asyncReducers?: ReducersMapObject<StateSchema>,
+    navigate?: (to: To, options?: NavigateOptions) => void
+) {
     const rootReducers: ReducersMapObject<StateSchema> = {
+        ...asyncReducers,
         counter: counterReducer,
-        user: userReducer,
-        loginForm: loginReducer
+        user: userReducer
     }
 
-    return configureStore<StateSchema>({
-        reducer: rootReducers,
+    const reducerManager = createReducerManager(rootReducers)
+
+    const store = configureStore({
+        reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
-        preloadedState: initialState
+        preloadedState: initialState,
+        middleware: getDefaultMiddleware => getDefaultMiddleware({ // Добавлена функция API, NAVIGATE, которую можно вызвать из thunkApi, в функции createAsycnThunk (Example: loginByUsername)
+            thunk: {
+                extraArgument: {
+                    api: $api,
+                    navigate
+                }
+            }
+        })
     })
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    store.reducerManager = reducerManager
+
+    return store
 }
+
+// Тип функции dispatch
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']

@@ -1,20 +1,26 @@
+
 @import 'reset';
 @import 'variables/global';
 @import 'themes/default';
 @import 'themes/dark';
 
 body {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-16);
     font-family: var(--font-family-main);
 }
 
 .App {
-    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.AppWrapper {
+    max-width: 1740px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     padding: 8px;
+    overflow: hidden;
     gap: var(--base-gap);
-    background-color: var(--bg-color);
     color: var(--primary-color);
     min-height: 100%;
 }

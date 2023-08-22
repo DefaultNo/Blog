@@ -1,14 +1,19 @@
 :root {
     --font-family-main: Consolas, 'sans-serif';
-    --font-size-m: 16px;
-    --font-line-m: 150%;
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-size-10: 10px;
+    --font-size-12: 12px;
+    --font-size-14: 14px;
+    --font-size-16: 16px;
+    --font-size-18: 18px;
+    --font-size-21: 21px;
+    --font-size-24: 24px;
+    --font-size-27: 27px;
 
-    // ---
-    --font-size-l: 24px;
-    --font-line-l: 130%;
-    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
-
+    // ===========
+    --font-lh-110: 110%;
+    --font-lh-125: 125px;
+    --font-lh-150: 150px;
+    
 
     // SIZES 
     // navbar

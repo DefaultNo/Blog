@@ -1,0 +1,80 @@
+.CommentCard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--code-bg);
+    border-radius: var(--border-radius);
+    padding: 20px 10px;
+    gap: 10px;
+
+    &.isLoading {
+        background: none
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.username {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.date { 
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.dateText {
+
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.reply {
+    display: flex;
+    align-items: center;
+    min-height: auto;
+    gap: 3px;
+}
+
+.estimate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.estimateItem {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.estimateIcon {
+
+}
+
+.estimateValue {
+
+}

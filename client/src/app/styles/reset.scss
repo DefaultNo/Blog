@@ -43,10 +43,19 @@ button {
 	cursor: pointer;
 	color: inherit;
 	background-color: inherit;
+    font-family: inherit;
 }
 
 html, body {
     height: 100%;
+}
+
+code {
+    font-family: var(--font-family-main);
+}
+
+pre {
+    margin: 0;
 }
 
 body {

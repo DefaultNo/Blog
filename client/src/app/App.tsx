@@ -3,15 +3,16 @@ import { AppRouter } from './providers/router'
 
 import { Suspense, useEffect } from 'react'
 import { useTheme } from 'app/providers/ThemeProvider'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { userActions } from 'entities/User'
+import { getUserInited, userActions } from 'entities/User'
 
 function App () {
     const { theme } = useTheme()
     const dispatch = useDispatch()
+    const inited = useSelector(getUserInited)
 
     useEffect(() => {
         dispatch(userActions.initAuthData())
@@ -19,13 +20,15 @@ function App () {
 
     return (
         <div className={classNames('App', {}, [theme])}>
-            <Suspense fallback>
-                <Navbar />
-                <div className={classNames('content-wrapper')}>
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
+            <div className='AppWrapper'>
+                <Suspense fallback>
+                    <Navbar />
+                    <div className='content-wrapper'>
+                        <Sidebar />
+                        {inited && <AppRouter />}
+                    </div>
+                </Suspense>
+            </div>
         </div>
     )
 }

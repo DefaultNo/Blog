@@ -7,9 +7,37 @@
     --inverted-bg-color: #fff;
 
     // Основной цвет (Основного текста, кнопок, и т.п)
-    --primary-color: #FFF;
+    --primary-color: #fff;
+    --primary-color-rgb: 255 255 255;
+
+    // Инвертированный цвет (Основного текста, кнопок, и т.п)
     --inverted-primary-color: #222;
 
     // Дополнительный текст (параграфы, описание и т.п)
     --secondary-color: #E7E7E7;
+
+    // Базовые цвета сайта
+    --primary-color-opacity-10: rgba(var(--primary-color-rgb) / 0.1);
+    --primary-color-opacity-20: rgba(var(--primary-color-rgb) / 0.2);
+    --primary-color-opacity-30: rgba(var(--primary-color-rgb) / 0.3);
+    
+    // --base-color: #565656;
+    --base-bg-color: #282B32;
+
+
+
+    // COMMON SHADOW
+    --shadow: 0 2px 6px rgb(99 99 99 / 0.2);
+
+    // SKELETON
+    --skeleton-bg-color: #171819;
+    --skeleton-highlight-color: #212223;
+    --skeleton-shadow: 0px 0px 10px rgb(0 0 0 / 0.1);
+
+    // CODE 
+    --code-bg: #212223;
+    --code-bg-hover: #1c1d1e;
+
+    // ARTICLE-ITEM
+    --article-bg: #212223;
 }

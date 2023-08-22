@@ -1,7 +1,6 @@
-import type { User, UserSchema } from './model/types/user'
-import { userActions, userReducer } from './model/slice/userSlice'
-import { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData'
+export { type User, type UserSchema } from './model/types/user'
 
-export { userActions, userReducer }
-export { type User, type UserSchema }
-export { getUserAuthData }
+export { userActions, userReducer } from './model/slice/userSlice'
+
+export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData'
+export { getUserInited } from './model/selectors/getUserInited/getUserInited'

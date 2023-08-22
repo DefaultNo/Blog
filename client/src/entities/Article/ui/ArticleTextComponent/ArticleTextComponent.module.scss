@@ -1,0 +1,11 @@
+.title {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.paragraph {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

@@ -8,8 +8,34 @@
 
     // Основной цвет (Основного текста, кнопок, и т.п)
     --primary-color: #222;
+    --primary-color-rgb: 34 34 34;
+
+    // Инвертированный цвет (Основного текста, кнопок, и т.п)
     --inverted-primary-color: #fff;
 
-    // Дополнительный текст (параграфы, описание и т.п)
-    --secondary-color: #4F4F4f;
+    // Доп. текст (параграфы, описание и т.п)
+    --secondary-color: #565964;
+
+    // Базовые цвета сайта
+    --primary-color-opacity-10: rgba(var(--primary-color-rgb) / 0.1);
+    --primary-color-opacity-20: rgba(var(--primary-color-rgb) / 0.2);
+    --primary-color-opacity-30: rgba(var(--primary-color-rgb) / 0.3);
+    
+    // --base-color: #E6E8EC;
+    --base-bg-color: #E6E8EC;
+
+
+    // COMMON SHADOW
+    --shadow: 0 2px 6px rgb(99 99 99 / 0.2);
+
+    // SKELETON
+    --skeleton-bg-color: #f1f1f1;
+    --skeleton-highlight-color: #e1e1e1;
+    --skeleton-shadow: 0px 0px 10px rgb(0 0 0 / 0.1);
+
+
+    // CODE 
+    --code-bg: #f1f1f1;
+    --code-bg-hover: #fbfbfb;
+
 }

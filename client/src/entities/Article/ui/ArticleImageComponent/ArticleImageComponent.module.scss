@@ -1,0 +1,33 @@
+.ArticleImageComponent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--code-bg);
+    min-height: 340px;
+    position: relative;
+
+    img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &::after {
+        content: '404 IMAGE';
+        position: absolute;
+        font-weight: 900;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 48px;
+    }
+}
+
+.description {
+    text-align: center;
+}

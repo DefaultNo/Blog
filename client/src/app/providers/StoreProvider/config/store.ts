@@ -1,7 +1,6 @@
-import { type ReducersMapObject, configureStore } from '@reduxjs/toolkit'
+import { type ReducersMapObject, configureStore, type CombinedState, type Reducer } from '@reduxjs/toolkit'
 import { type StateSchema } from './StateSchema'
 
-import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reducerManager'
 import { $api } from 'shared/api/api'
@@ -14,14 +13,13 @@ export function createReduxStore (
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
-        counter: counterReducer,
         user: userReducer
     }
 
     const reducerManager = createReducerManager(rootReducers)
 
     const store = configureStore({
-        reducer: reducerManager.reduce,
+        reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
         devTools: __IS_DEV__,
         preloadedState: initialState,
         middleware: getDefaultMiddleware => getDefaultMiddleware({ // Добавлена функция API, NAVIGATE, которую можно вызвать из thunkApi, в функции createAsycnThunk (Example: loginByUsername)

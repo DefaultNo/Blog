@@ -1,22 +1,30 @@
 .Sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     height: calc(100vh - var(--navbar-height));
     flex: 0 0 var(--sidebar-width);
     width: var(--sidebar-width);
-    padding: var(--base-padding);
-    border-radius: var(--border-radius);
-    background-color: var(--secondary-bg-color);
     transition: width 0.3s ease 0s, flex 0.3s ease 0s;
 }
 
+.SidebarWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding: var(--base-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-bg-color);
+}
+
 .list {
-    flex: 1 1 auto;
+    flex: 1 1 auto; 
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 5px;
+}
+
+.item {
+    position: relative;
 }
 
 .switchers {
@@ -30,6 +38,4 @@
 .collapsed {
     width: var(--sidebar-width-collapsed);
     flex: 0 0 var(--sidebar-width-collapsed);
-
-    
 }

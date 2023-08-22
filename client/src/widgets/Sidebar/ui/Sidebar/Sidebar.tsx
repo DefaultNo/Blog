@@ -7,8 +7,9 @@ import { LangSwitcher } from 'widgets/LangSwitcher'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Burger } from 'shared/ui/Burger/Burger'
-import { SidebarItemsList } from 'widgets/Sidebar/model/items'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
+import { useSelector } from 'react-redux'
+import { getSidebarItems } from 'widgets/Sidebar/model/selectors/getSidebarItems'
 
 interface SidebarProps {
     className?: string
@@ -16,6 +17,7 @@ interface SidebarProps {
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false)
+    const SidebarItemsList = useSelector(getSidebarItems)
 
     const onToggle = () => {
         setCollapsed(!collapsed)
@@ -23,23 +25,25 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
 
     return (
         <div data-testid='sidebar' className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <Burger data-testid='sidebar-toggle' collapsed={collapsed} onClick={onToggle} />
-            <ul className={classNames(cls.list)}>
-                {
-                    SidebarItemsList.map((item) => (
-                        <li key={item.path} className={classNames(cls.item)}>
-                            <SidebarItem
-                                collapsed={collapsed}
-                                item={item}
-                            />
-                        </li>
-                    ))
-                }
-            </ul>
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher short={true} />
-                <BugButton />
+            <div className={cls.SidebarWrapper}>
+                <Burger data-testid='sidebar-toggle' collapsed={collapsed} onClick={onToggle} />
+                <ul className={classNames(cls.list)}>
+                    {
+                        SidebarItemsList.map((item) => (
+                            <li key={item.path} className={classNames(cls.item)}>
+                                <SidebarItem
+                                    collapsed={collapsed}
+                                    item={item}
+                                />
+                            </li>
+                        ))
+                    }
+                </ul>
+                <div className={cls.switchers}>
+                    <ThemeSwitcher />
+                    <LangSwitcher short={true} />
+                    <BugButton />
+                </div>
             </div>
         </div>
     )

@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { Input, ThemeInput } from 'shared/ui/Input/Input'
-import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { Text } from 'shared/ui/Text/Text'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 
 // PARTIAL IMPORT STATE
@@ -20,6 +20,7 @@ import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLogi
 import { getLoginLoading } from '../../model/selectors/getLoginIsLoading/getIsLoginLoading'
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { TextTheme } from 'shared/ui/Text/types'
 
 export interface LoginFormProps {
     className?: string
@@ -62,7 +63,7 @@ const LoginForm = memo((props: LoginFormProps) => {
     return (
         <DynamicModuleLoader name='loginForm' reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title='Авторизация' />
+                <Text>Авторизация</Text>
 
                 <div className={cls.inputs}>
                     <Input
@@ -82,10 +83,10 @@ const LoginForm = memo((props: LoginFormProps) => {
                     />
                 </div>
 
-                {error && <Text text={t('Вы ввели неверный логин или пароль')} theme={TextTheme.ERROR} />}
+                {error && <Text theme={TextTheme.ERROR}>{t('Вы ввели неверный логин или пароль')}</Text>}
 
                 <Button
-                    theme={ThemeButton.BLUE}
+                    theme={ThemeButton.PRIMARY}
                     loader={true}
                     disabled={isLoading}
                     onClick={onLoginClick}

@@ -45,7 +45,7 @@ const Navbar = memo(({ className }: NavbarProps) => {
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
-                <Button onClick={onOpenModal} theme={ThemeButton.BLUE}>{t('Войти')}</Button>
+                <Button onClick={onOpenModal} theme={ThemeButton.PRIMARY}>{t('Войти')}</Button>
                 {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
             </div>
         </div>

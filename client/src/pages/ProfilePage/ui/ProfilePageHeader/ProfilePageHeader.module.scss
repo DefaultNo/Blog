@@ -1,0 +1,20 @@
+.ProfileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @media (max-width: 991.98px) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

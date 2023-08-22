@@ -1,0 +1,21 @@
+.Ripple {
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.effect {
+    position: absolute;
+    transform: scale(0);
+    border-radius: 100%;
+    opacity: .6;
+    animation-name: ripple;
+}
+
+@keyframes ripple {
+    to {
+       opacity: 0;
+       transform: scale(2);
+    }
+}

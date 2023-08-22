@@ -23,7 +23,7 @@ export const Blue: Story = {
   // decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     children: 'Blue Button',
-    theme: ThemeButton.BLUE
+    theme: ThemeButton.PRIMARY
   }
 }
 
@@ -31,7 +31,7 @@ export const BlueLoader: Story = {
   // decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     children: 'Loader Button',
-    theme: ThemeButton.BLUE,
+    theme: ThemeButton.PRIMARY,
     loader: true
   }
 }

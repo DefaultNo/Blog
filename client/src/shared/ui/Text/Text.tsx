@@ -1,30 +1,53 @@
-import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Text.module.scss'
-import { memo } from 'react'
+import { type Mods, classNames } from 'shared/lib/classNames/classNames'
+import { type FC, createElement } from 'react'
+import { type TextSize, type TextType, type TextLH, type TextTheme, type TextAlign, type TextFW } from './types'
 
-export enum TextTheme {
-    ERROR = 'error'
+interface TextSX {
+    size?: TextSize
+    lineHeight?: TextLH
+    fontWeight?: TextFW
 }
 
 interface TextProps {
     className?: string
-    title?: string
-    text?: string
+    sx?: TextSX
     theme?: TextTheme
+    type?: TextType
+    position?: TextAlign
 }
 
-export const Text = memo((props: TextProps) => {
+export const Text: FC<TextProps> = (props) => {
     const {
         className,
-        title,
-        text,
-        theme
+        children,
+        theme,
+        position,
+        sx = {},
+        type = 'div'
     } = props
 
+    const {
+        size,
+        lineHeight,
+        fontWeight
+    } = sx
+
+    const mods: Mods = {
+        ...(theme && { [cls[theme]]: true }),
+        ...(position && { [cls[position]]: true }),
+        ...(size && { [cls[size]]: true }),
+        ...(lineHeight && { [cls[lineHeight]]: true }),
+        ...(fontWeight && { [cls[`fw-${fontWeight}`]]: true })
+    }
+
+    const createText = () => {
+        return createElement(type, { className: classNames(cls.Text, mods, [className]) }, children)
+    }
+
     return (
-        <div className={classNames(cls.Text, {}, [className, cls[theme]])}>
-            {title && <p className={cls.title}>{title}</p>}
-            {text && <p className={cls.text}>{text}</p>}
-        </div>
+        <>
+            {createText()}
+        </>
     )
-})
+}

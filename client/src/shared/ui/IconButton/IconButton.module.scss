@@ -1,0 +1,81 @@
+.IconButtonWrapper {
+    display: block;
+}
+
+.IconButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+// Размеры
+.small {
+    .IconButton {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+    }
+}
+
+.medium {
+    .IconButton {
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
+    }
+}
+
+.large {
+    .IconButton {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+    }
+}
+
+// 1. Тема кнопки
+.primary {
+    .IconButton {
+        background-color: var(--primary-color-opacity-10);
+        border-radius: 50%;
+        transition: background-color .2s ease 0s;
+    
+        &:hover {
+            background-color: var(--primary-color-opacity-20);
+        }
+    
+        &:active {
+            background-color: var(--primary-color-opacity-30);
+        }
+    }
+}
+
+// 2. Тема кнопки
+.border {
+    .IconButton {
+        border-radius: 10px;
+        border: 1px solid var(--primary-color-opacity-10);
+        transition: border, background-color, .2s ease 0s;
+
+        &:hover {
+            background-color: var(--primary-color-opacity-10);
+        }
+
+        &:active {
+            border-color: var(--primary-color-opacity-30);
+        }
+    }
+
+    &.selected {
+        .IconButton {
+            background-color: var(--primary-color-opacity-10);
+            border-color: var(--primary-color-opacity-30);
+        }
+    }
+}
+

@@ -1,20 +1,75 @@
-
-.title {
-    font-size: var(--font-size-l);
+.Text {
+    word-break: break-word;
+    font-weight: 400;
+    font-size: var(--font-size-16);
     color: var(--primary-color);
+    line-height: 100%;
+}
+
+
+// THEMES ===
+
+.inverted {
+    color: var(--inverted-primary-color)
 }
 
 .text {
-    font-size: var(--font-size-m);
     color: var(--secondary-color);
 }
 
-.error {
-    .title {
-        color: var(--red-color);
-    }
-    
-    .text {
-        color: var(--red-color);
-    }
+.blue {
+    color: var(--blue-color);
 }
+
+.error {
+    color: var(--red-color);
+}
+
+// ==========================================================================================
+
+// POSITION
+
+.left {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+.right {
+    justify-content: flex-end;
+    text-align: left;
+}
+
+// ==========================================================================================
+
+// SIZES
+
+.fs-10 {font-size: var(--font-size-10);}
+.fs-12 {font-size: var(--font-size-12);}
+.fs-14 {font-size: var(--font-size-14);}
+.fs-16 {font-size: var(--font-size-16);}
+.fs-18 {font-size: var(--font-size-18);}
+.fs-21 {font-size: var(--font-size-21);}
+.fs-24 {font-size: var(--font-size-24);}
+.fs-27 {font-size: var(--font-size-27);}
+
+// ==========================================================================================
+
+// LINE-HEIGHT
+.lh-110 {line-height: 110%;}
+.lh-125 {line-height: 125%;}
+.lh-150 {line-height: 150%;}
+
+// ==========================================================================================
+
+// FONT-WEIGHT
+.fw-400 {font-weight: 400;}
+.fw-500 {font-weight: 500;}
+.fw-600 {font-weight: 600;}
+.fw-700 {font-weight: 700;}
+.fw-800 {font-weight: 800;}
+.fw-900 {font-weight: 900;}

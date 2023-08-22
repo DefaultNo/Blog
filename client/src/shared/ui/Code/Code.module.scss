@@ -1,0 +1,25 @@
+.Code {
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    background-color: var(--code-bg);
+    position: relative;
+    box-shadow: var(--shadow);
+    transition: background-color .1s ease 0s;
+
+    @media (any-hover: hover){
+        &:hover{
+            background-color: var(--code-bg-hover);
+        }
+    }
+}
+
+.CodeEl {
+    font-size: var(--font-size-16);
+}
+
+.copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

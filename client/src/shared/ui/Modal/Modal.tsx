@@ -1,5 +1,5 @@
-import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
+import { type Mods, classNames } from 'shared/lib/classNames/classNames'
 import { useEffect, type ReactNode, useCallback, useState } from 'react'
 import { Portal } from '../Portal/Portal'
 import { useTheme } from 'app/providers/ThemeProvider'
@@ -27,7 +27,7 @@ export const Modal = (props: ModalProps) => {
     // Ленивая подгрузка модального окна
     useEffect(() => {
         if (isOpen) {
-             setIsMounted(true)
+            setIsMounted(true)
         }
     }, [isOpen])
 
@@ -61,7 +61,7 @@ export const Modal = (props: ModalProps) => {
         }
     }, [isOpen, onKeyDown])
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.open]: isOpen
     }
 

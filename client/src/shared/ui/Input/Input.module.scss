@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     height: 46px;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
     position: relative;
 }
 
@@ -20,6 +22,39 @@
         color: var(--primary-color);
         opacity: 0.5;
     }
+}
+
+.lock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+    
+    svg {
+        max-width: 100%;
+
+        path {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+// customPlaceholder: true
+.customPlaceholder {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: var(--font-size-m);
+    background-color: var(--secondary-bg-color);
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: all .3s ease 0s;
 }
 
 // Первая тема INPUT
@@ -57,19 +92,7 @@
     border-radius: 6px;
 }
 
-// customPlaceholder: true
-.customPlaceholder {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: var(--font-size-m);
-    background-color: var(--secondary-bg-color);
-    padding: 2px 5px;
-    font-weight: 500;
-    pointer-events: none;
-    transition: all .3s ease 0s;
-}
+
 
 // FOCUS
 .focus {
@@ -80,10 +103,31 @@
         top: 0;
         left: 10px;
     }
-    
+}
+
+.active {
+    position: relative;
+    z-index: 1;
+
+    .customPlaceholder {
+        color: var(--blue-color);
+        font-size: calc(var(--font-size-m) - 2px);
+        transform: translateY(-50%);
+        top: 0;
+        left: 10px;
+    }
+
     &.primary {
         &::before {
             transform: scale(1);
         }
+    }
+}
+
+// readOnly: true
+.readonly {
+    .input {
+        opacity: .7;
+        pointer-events: none;
     }
 }

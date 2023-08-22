@@ -2,10 +2,18 @@
 import { type RuleSetRule } from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildCssLoaders } from './loaders/buildCssLoaders'
+import { buildBabelLoader } from './loaders/buildBabelLoaders'
 
 export function buildLoaders (options: BuildOptions): RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/,
+        type: 'asset',
+        resourceQuery: /url/
+    }
+
+    const svgUrlLoader = {
+        test: /\.svg$/i,
+        resourceQuery: { not: [/url/] },
         use: ['@svgr/webpack']
     }
 
@@ -22,29 +30,12 @@ export function buildLoaders (options: BuildOptions): RuleSetRule[] {
 
     const cssLoader = buildCssLoaders(options.isDev)
 
-    const babelLoader = {
-        test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    [
-                        'i18next-extract',
-                        {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true
-                        }
-                    ]
-                ]
-            }
-        }
-    }
+    const babelLoader = buildBabelLoader(options)
 
     return [
         fileLoader,
         svgLoader,
+        svgUrlLoader,
         babelLoader,
         typeScriptLoader,
         cssLoader

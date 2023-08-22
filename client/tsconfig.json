@@ -2,6 +2,8 @@
   "compilerOptions": {
     // outDir - место куда производится сборка (не важна, сборка идет через webpack)
     "outDir": "./dist/",
+    // strict - добавляет строгий режим
+    "strict": true,
     // noImplicitAny - подсвечивает места где не указан тип
     "noImplicitAny": true,
     "module": "ESNext",

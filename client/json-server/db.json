@@ -1,33 +1,372 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "body": "some comment",
-            "postId": "1"
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "admin"
-        }
-    ],
-    "profile": {
-        "name": "Алексей",
-        "lastname": "Ивольев",
-        "age": "23",
-        "currency": "UAH",
-        "country": "Ukraine",
-        "city": "Kiev",
-        "username": "Admin",
-        "avatar": "#"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "Комментарий написанный специально для этой статьи",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Добавить еще один комментарий",
+      "id": "V0dUWYz"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Еще один",
+      "id": "D4yTnSg"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "Комментарий для этой статьи",
+      "id": "NrRCe-E"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "Комментарий для статьи с ID = 5",
+      "id": "8CUx2i2"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "userId": "1",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "#",
+      "views": 10,
+      "createdAt": "08.08.2023",
+      "type": [
+        "IT"
+      ],
+      "content": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Какой-то текст для какого-то блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<DynamicModuleLoader name={'articleDetails'} reducers={reducers} removeAfterUnmount={true}>\n  <div className={classNames(cls.ArticleDetails, {}, [className])}>\n    {content}\n  </div>\n</DynamicModuleLoader>"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Название для нижнего блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "title": "Cellebrite попросила правоохранительные органы держать в секрете технологию взлома смартфонов",
+      "subtitle": "Cellebrite попросила правоохранительные органы держать в секрете технологию взлома смартфонов",
+      "img": "#",
+      "views": 3,
+      "createdAt": "02.03.2023",
+      "type": [
+        "IT"
+      ],
+      "content": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Какой-то текст для какого-то блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<DynamicModuleLoader name={'articleDetails'} reducers={reducers} removeAfterUnmount={true}>\n  <div className={classNames(cls.ArticleDetails, {}, [className])}>\n    {content}\n  </div>\n</DynamicModuleLoader>"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Название для нижнего блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "img": "#",
+      "views": 10,
+      "createdAt": "08.08.2023",
+      "type": [
+        "IT"
+      ],
+      "content": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Какой-то текст для какого-то блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<DynamicModuleLoader name={'articleDetails'} reducers={reducers} removeAfterUnmount={true}>\n  <div className={classNames(cls.ArticleDetails, {}, [className])}>\n    {content}\n  </div>\n</DynamicModuleLoader>"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Название для нижнего блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userId": "2",
+      "title": "Cellebrite попросила правоохранительные органы держать в секрете технологию взлома смартфонов",
+      "subtitle": "Cellebrite попросила правоохранительные органы держать в секрете технологию взлома смартфонов",
+      "img": "#",
+      "views": 3,
+      "createdAt": "02.03.2023",
+      "type": [
+        "IT"
+      ],
+      "content": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Какой-то текст для какого-то блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<DynamicModuleLoader name={'articleDetails'} reducers={reducers} removeAfterUnmount={true}>\n  <div className={classNames(cls.ArticleDetails, {}, [className])}>\n    {content}\n  </div>\n</DynamicModuleLoader>"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Название для нижнего блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "userId": "2",
+      "title": "Обход блокировок на OpenWRT с помощью Passwall (v2ray, xray, trojan) и tun2socks",
+      "subtitle": "Обход блокировок на OpenWRT с помощью Passwall (v2ray, xray, trojan) и tun2socks",
+      "img": "#",
+      "views": 3,
+      "createdAt": "06.02.2022",
+      "type": [
+        "IT",
+        "Technology"
+      ],
+      "content": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Какой-то текст для какого-то блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "2",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "3",
+          "type": "CODE",
+          "code": "<DynamicModuleLoader name={'articleDetails'} reducers={reducers} removeAfterUnmount={true}>\n  <div className={classNames(cls.ArticleDetails, {}, [className])}>\n    {content}\n  </div>\n</DynamicModuleLoader>"
+        },
+        {
+          "id": "4",
+          "type": "TEXT",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          ]
+        },
+        {
+          "id": "5",
+          "type": "IMAGE",
+          "src": "",
+          "title": "Описание для картинки"
+        },
+        {
+          "id": "6",
+          "type": "TEXT",
+          "title": "Название для нижнего блока с текстом",
+          "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin",
+      "role": "ADMIN"
+    },
+    {
+      "id": "2",
+      "username": "DefaultUser",
+      "password": "user",
+      "role": "USER"
+    }
+  ],
+  "profile": [
+    {
+      "id": "1",
+      "name": "Алекс",
+      "lastname": "Ковалев",
+      "age": 32,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Kiev",
+      "username": "Dven123",
+      "avatar": "#"
+    },
+    {
+      "id": "2",
+      "name": "Валерий",
+      "lastname": "Сервон2",
+      "age": 24,
+      "currency": "KZT",
+      "country": "Kazakhstan",
+      "city": "Kiev",
+      "username": "Dven123",
+      "avatar": "#"
+    }
+  ]
 }
